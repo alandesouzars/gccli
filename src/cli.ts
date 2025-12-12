@@ -26,6 +26,9 @@ CALENDAR COMMANDS
   gccli <email> calendars
       List all calendars. Returns: ID, name, access role.
 
+  gccli <email> acl <calendarId>
+      List access control rules (who has access to the calendar).
+
   gccli <email> events <calendarId> [options]
       List events from a calendar.
       Options:
@@ -110,6 +113,9 @@ async function main() {
 		switch (command) {
 			case "calendars":
 				await handleCalendars(account);
+				break;
+			case "acl":
+				await handleAcl(account, commandArgs);
 				break;
 			case "events":
 				await handleEvents(account, commandArgs);
@@ -197,6 +203,24 @@ async function handleCalendars(account: string) {
 		console.log("ID\tNAME\tROLE");
 		for (const c of calendars) {
 			console.log(`${c.id}\t${c.summary || ""}\t${c.accessRole || ""}`);
+		}
+	}
+}
+
+async function handleAcl(account: string, args: string[]) {
+	const calendarId = args[0];
+	if (!calendarId) error("Usage: <email> acl <calendarId>");
+
+	const rules = await service.getCalendarAcl(account, calendarId);
+	if (rules.length === 0) {
+		console.log("No ACL rules");
+	} else {
+		console.log("SCOPE_TYPE\tSCOPE_VALUE\tROLE");
+		for (const rule of rules) {
+			const scopeType = rule.scope?.type || "";
+			const scopeValue = rule.scope?.value || "";
+			const role = rule.role || "";
+			console.log(`${scopeType}\t${scopeValue}\t${role}`);
 		}
 	}
 }

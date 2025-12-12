@@ -80,6 +80,12 @@ export class CalendarService {
 		return response.data.items || [];
 	}
 
+	async getCalendarAcl(email: string, calendarId: string): Promise<calendar_v3.Schema$AclRule[]> {
+		const calendar = this.getCalendarClient(email);
+		const response = await calendar.acl.list({ calendarId });
+		return response.data.items || [];
+	}
+
 	async listEvents(
 		email: string,
 		calendarId: string,
