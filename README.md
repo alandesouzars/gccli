@@ -149,6 +149,21 @@ Example:
 gccli you@gmail.com freebusy primary,work@group.calendar.google.com --from 2024-01-15T00:00:00Z --to 2024-01-16T00:00:00Z
 ```
 
+### acl
+
+List access control rules for a calendar.
+
+```bash
+gccli <email> acl <calendarId>
+```
+
+Returns: scope type, scope value, role.
+
+Example:
+```bash
+gccli you@gmail.com acl primary
+```
+
 ## Data Storage
 
 All data is stored in `~/.gccli/`:
